@@ -1,5 +1,14 @@
 import requests
 
+print('Sending request...')
+
 response = requests.get('https://httpbin.org/ip')
 
-print('Your IP is {0}'.format(response.json()['origin']))
+if response.status_code != 200:
+    print('Error:', response.status_code)
+    exit(1)
+
+json = response.json()
+
+print('Response:', json)
+
