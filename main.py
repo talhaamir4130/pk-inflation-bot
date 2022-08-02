@@ -1,4 +1,3 @@
-from calendar import calendar
 import requests
 from bs4 import BeautifulSoup
 
